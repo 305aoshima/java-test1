@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<project name="HelloWorldAnt" default="clean" basedir=".">
+<project name="HelloWorldAnt" default="build" basedir=".">
   <target name="compile" description="コンパイル">
     <echo message="コンパイルを開始します。" />
     <mkdir dir="classes"/>
     <javac srcdir="src" destdir="classes" />
   </target>
+  <target name="build" depends="compile"/>
   <target name="clean" description="ビルド成果物削除">
     <delete dir="classes" />
   </target>
 </project>
-

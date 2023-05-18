@@ -1,7 +1,9 @@
-import java.util.*;
+import static org.testng.Assert.assertEquals;
+import org.testng.annotations.*;
 
 public class HelloTest {
-  public static void main(String[] args) throws Exception {
-    System.out.println("XXXXXXXX");
+  @Test public void test001() { D("test001"); }
+  static void debu(String format, Object... args) {
+    System.out.printf(format + "\n", args);
   }
 }

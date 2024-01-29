@@ -7,11 +7,14 @@
   </target>
   <target name="build" depends="compile"/>
   <target name="test" depends="compile">
-    <junit fork="false" haltonerror="true" haltonfailure="true"
+    <testng classpath="${test.classpath}: ${test.dest}">
+      <xmlfileset dir="${ws.home}" includes="AllTests.xml"/>
+    </testng> 	
+    <!--junit fork="false" haltonerror="true" haltonfailure="true"
        showoutput="false">
       <test name=""/>
       <classpath path="test"/>
-    </junit>
+    </junit-->
   </target>
   <target name="clean" description="ビルド成果物削除">
     <delete dir="classes" />

@@ -11,10 +11,12 @@
     <echo message="コンパイルを開始します。" />
     <mkdir dir="classes"/>
     <javac srcdir="src" destdir="classes" includeantruntime="false"/>
+    <mkdir dir="test-classes"/>
+    <javac srcdir="test" destdir="test-classes" includeantruntime="false"/>
   </target>
   <target name="build" depends="compile"/>
   <target name="test" depends="compile">
-    <testng classpath="${test.classpath}: ${test.dest}">
+    <testng classpath="test-classes;classes">
       <xmlfileset  includes="AllTests.xml"/>
     </testng> 	
     <!--junit fork="false" haltonerror="true" haltonfailure="true"

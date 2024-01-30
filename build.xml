@@ -16,7 +16,11 @@
   </target>
   <target name="build" depends="compile"/>
   <target name="test" depends="compile">
-    <testng classpath="test-classes:classes">
+    <testng>
+      <classpath>
+        <pathelement location="test-classes"/>
+        <pathelement location="classes"/>
+      </classpath>
       <xmlfileset  includes="AllTests.xml"/>
     </testng> 	
     <!--junit fork="false" haltonerror="true" haltonfailure="true"

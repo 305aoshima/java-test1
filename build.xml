@@ -16,7 +16,7 @@
   </target>
   <target name="build" depends="compile"/>
   <target name="test" depends="compile">
-    <testng>
+    <testng haltOnfailure="true">
       <classpath>
         <pathelement location="test-classes"/>
         <pathelement location="classes"/>

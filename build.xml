@@ -7,7 +7,7 @@
       <pathelement location="slf4j-simple-1.7.36.jar"/>
     </classpath>
   </taskdef>
-  <target name="compile" description="コンパイル" depends="init">
+  <target name="compile" description="コンパイル">
     <echo message="コンパイルを開始します。" />
     <mkdir dir="classes"/>
     <javac srcdir="src" destdir="classes" />

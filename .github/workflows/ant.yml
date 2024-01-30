@@ -21,5 +21,6 @@ jobs:
         #git diff ${{github.base_ref}}..${{github.sha}} --name-only
         #ant -diagnostics
         #find /usr/share -name '*.jar'
+        ls -Rl /usr/share/ant
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml test

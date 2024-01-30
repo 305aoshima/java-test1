@@ -12,7 +12,7 @@
     <mkdir dir="classes"/>
     <javac srcdir="src" destdir="classes" includeantruntime="false"/>
     <mkdir dir="test-classes"/>
-    <javac srcdir="test" destdir="test-classes" includeantruntime="false"/>
+    <javac srcdir="test" destdir="test-classes" classpath="testng-7.6.1.jar" includeantruntime="false"/>
   </target>
   <target name="build" depends="compile"/>
   <target name="test" depends="compile">

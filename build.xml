@@ -3,6 +3,7 @@
   <taskdef name="testng" classname="org.testng.TestNGAntTask">
     <classpath>
       <pathelement location="testng-7.6.1.jar"/>
+      <pathelement location="slf4j-api-1.7.36.jar"/>
     </classpath>
   </taskdef>
   <target name="compile" description="コンパイル" depends="init">

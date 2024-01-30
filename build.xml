@@ -28,6 +28,7 @@
     <testng haltOnfailure="true">
       <classpath refid="test.classpath"/>
       <classpath location="test-classes"/>
+      <classpath location="classes"/>
       <xmlfileset dir="." includes="testng.xml"/>
     </testng>
   </target>

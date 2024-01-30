@@ -19,5 +19,6 @@ jobs:
         echo ${{github.base_ref}}
         echo ${{github.sha}}
         git diff ${{github.base_ref}}..${{github.sha}} --name-only
+        ant -diagnostics
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml test

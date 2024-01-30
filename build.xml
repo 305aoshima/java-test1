@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="HelloWorldAnt" default="build" basedir=".">
   <path id="main.classpath">
-    <pathelement location="slf4j-api-1.7.36.jar"/>
-    <pathelement location="slf4j-simple-1.7.36.jar"/>
+    <pathelement location="lib/slf4j-api-1.7.36.jar"/>
+    <pathelement location="lib/slf4j-simple-1.7.36.jar"/>
   </path>
   <path id="test.classpath">
     <path refid="main.classpath"/>
-    <pathelement location="testng-7.6.1.jar"/>
-    <pathelement location="jcommander-1.82.jar"/>
+    <pathelement location="test-lib/testng-7.6.1.jar"/>
+    <pathelement location="test-lib/jcommander-1.82.jar"/>
   </path>
   <taskdef resource="testngtasks" classpathref="test.classpath"/>
   <target name="compile" description="コンパイル">

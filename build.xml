@@ -21,6 +21,7 @@
         <pathelement location="test-classes"/>
         <pathelement location="classes"/>
         <pathelement location="jcommander-1.82.jar"/>
+        <pathelement location="slf4j-api-1.7.36.jar"/>
       </classpath>
       <xmlfileset dir="." includes="AllTests.xml"/>
     </testng>

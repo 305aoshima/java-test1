@@ -10,7 +10,7 @@
   <target name="compile" description="コンパイル">
     <echo message="コンパイルを開始します。" />
     <mkdir dir="classes"/>
-    <javac srcdir="src" destdir="classes" />
+    <javac srcdir="src" destdir="classes" includeantruntime="false"/>
   </target>
   <target name="build" depends="compile"/>
   <target name="test" depends="compile">

@@ -13,4 +13,4 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - run: ant -noinput -buildfile build.xml test
+    - run: ant -noinput test

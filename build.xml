@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="HelloWorldAnt" default="build" basedir=".">
   <taskdef resource="testngtasks">
-  <!--taskdef name="testng" classname="org.testng.TestNGAntTask"-->
     <classpath>
       <pathelement location="testng-7.6.1.jar"/>
       <pathelement location="slf4j-api-1.7.36.jar"/>
@@ -22,13 +21,8 @@
         <pathelement location="test-classes"/>
         <pathelement location="classes"/>
       </classpath>
-      <xmlfileset  includes="AllTests.xml"/>
-    </testng> 	
-    <!--junit fork="false" haltonerror="true" haltonfailure="true"
-       showoutput="false">
-      <test name=""/>
-      <classpath path="test"/>
-    </junit-->
+      <xmlfileset dir="." includes="AllTests.xml"/>
+    </testng>
   </target>
   <target name="clean" description="ビルド成果物削除">
     <delete dir="classes" />

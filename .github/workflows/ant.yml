@@ -16,8 +16,8 @@ jobs:
         distribution: 'temurin'
     - name: Show Properties
       run: |
-        echo ${{github.ref}}
+        echo ${{github.base_ref}}
         echo ${{github.sha}}
-        git diff ${{github.ref}}..${{github.sha}} --name-only
+        git diff ${{github.base_ref}}..${{github.sha}} --name-only
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml test

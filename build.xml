@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="HelloWorldAnt" default="build" basedir=".">
-  <taskdef resource="testngtasks" classpath="testng-7.6.1.jar"/>
-  <!--taskdef name="testng" classname="org.testng.TestNGAntTask">
+  <taskdef resource="testngtasks">
+  <!--taskdef name="testng" classname="org.testng.TestNGAntTask"-->
     <classpath>
       <pathelement location="testng-7.6.1.jar"/>
       <pathelement location="slf4j-api-1.7.36.jar"/>
       <pathelement location="slf4j-simple-1.7.36.jar"/>
     </classpath>
-  </taskdef>-->
+  </taskdef>
   <target name="compile" description="コンパイル">
     <echo message="コンパイルを開始します。" />
     <mkdir dir="classes"/>

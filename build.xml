@@ -18,7 +18,7 @@
     <mkdir dir="test-classes"/>
     <javac destdir="test-classes" classpath="testng-7.6.1.jar" includeantruntime="false">
       <src path="test"/>
-      <classpath refid="glover02.classpath"/>
+      <classpath refid="test.classpath"/>
     </javac>
   </target>
   <target name="build" depends="compile"/>

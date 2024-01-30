@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="HelloWorldAnt" default="build" basedir=".">
-  <taskdef resource="testngtasks">
-    <classpath>
-      <pathelement location="testng-7.6.1.jar"/>
-      <pathelement location="slf4j-api-1.7.36.jar"/>
-      <pathelement location="slf4j-simple-1.7.36.jar"/>
-    </classpath>
-  </taskdef>
+  <property name="src.dir"  value="src"/>
+  <property name="test-src.dir" value="test"/>
+  <path id="test.classpath">
+    <pathelement location="testng-7.6.1.jar"/>
+    <pathelement location="slf4j-api-1.7.36.jar"/>
+    <pathelement location="slf4j-simple-1.7.36.jar"/>
+    <pathelement location="jcommander-1.82.jar"/>
+  </path>
+  <taskdef resource="testngtasks" classpathref="test.classpath"/>
   <target name="compile" description="コンパイル">
     <echo message="コンパイルを開始します。" />
     <mkdir dir="classes"/>
-    <javac srcdir="src" destdir="classes" includeantruntime="false"/>
+    <javac destdir="classes" includeantruntime="false">
+      <src path="src"/>
+    </javac>
     <mkdir dir="test-classes"/>
-    <javac srcdir="test" destdir="test-classes" classpath="testng-7.6.1.jar" includeantruntime="false"/>
+    <javac destdir="test-classes" classpath="testng-7.6.1.jar" includeantruntime="false">
+      <src path="test"/>
+      <classpath refid="glover02.classpath"/>
+    </javac>
   </target>
   <target name="build" depends="compile"/>
   <target name="test" depends="compile">

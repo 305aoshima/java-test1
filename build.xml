@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="HelloWorldAnt" default="build" basedir=".">
-  <target name="init">
-    <taskdef name="testng" classpath="${test.classpath}" classname="org.testng.TestNGAntTask"/>
-  </target>
+  <taskdef name="testng" classpath="testng-7.6.1.jar"/>
   <target name="compile" description="コンパイル" depends="init">
     <echo message="コンパイルを開始します。" />
     <mkdir dir="classes"/>

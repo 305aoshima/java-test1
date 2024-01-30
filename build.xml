@@ -15,7 +15,7 @@
   <target name="build" depends="compile"/>
   <target name="test" depends="compile">
     <testng classpath="${test.classpath}: ${test.dest}">
-      <xmlfileset dir="${ws.home}" includes="AllTests.xml"/>
+      <xmlfileset  includes="AllTests.xml"/>
     </testng> 	
     <!--junit fork="false" haltonerror="true" haltonfailure="true"
        showoutput="false">

@@ -14,5 +14,10 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - name: Show Properties
+      run: |
+        echo ${{github.ref}}
+        echo ${{github.sha}}
+        git diff ${{github.ref}}..${{github.sha}} --name-only
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml test

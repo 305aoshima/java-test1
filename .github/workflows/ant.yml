@@ -20,6 +20,6 @@ jobs:
         echo ${{github.sha}}
         git diff ${{github.base_ref}}..${{github.sha}} --name-only
         ant -diagnostics
-        ls -Rl /usr/share/ant
+        ls -l /usr/share
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml test

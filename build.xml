@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="HelloWorldAnt" default="build" basedir=".">
+  <tstamp/>
   <path id="main.classpath">
     <pathelement location="lib/slf4j-api-1.7.36.jar"/>
     <pathelement location="lib/slf4j-simple-1.7.36.jar"/>

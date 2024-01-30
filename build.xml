@@ -33,5 +33,6 @@
   </target>
   <target name="clean" description="ビルド成果物削除">
     <delete dir="classes" />
+    <delete dir="test-classes" />
   </target>
 </project>

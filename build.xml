@@ -5,6 +5,7 @@
     <pathelement location="slf4j-simple-1.7.36.jar"/>
   </path>
   <path id="test.classpath">
+    <path refid="main.classpath"/>
     <pathelement location="testng-7.6.1.jar"/>
     <pathelement location="jcommander-1.82.jar"/>
   </path>
@@ -19,14 +20,12 @@
     <mkdir dir="test-classes"/>
     <javac destdir="test-classes" includeantruntime="false">
       <src path="test"/>
-      <classpath refid="main.classpath"/>
       <classpath refid="test.classpath"/>
     </javac>
   </target>
   <target name="build" depends="compile"/>
   <target name="test" depends="compile">
     <testng haltOnfailure="true">
-      <classpath refid="main.classpath"/>
       <classpath refid="test.classpath"/>
       <xmlfileset dir="." includes="AllTests.xml"/>
     </testng>
